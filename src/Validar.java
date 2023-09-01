@@ -9,7 +9,7 @@ public class Validar {
     
     public boolean fecha(Date fechaSol){
         Date fechaAct = new Date();
-        return fechaAct.compareTo(fechaSol)<=0;
+        return fechaSol.compareTo(fechaAct)<=0;
     }
     
     public boolean email(String email){

@@ -1,4 +1,5 @@
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -7,7 +8,7 @@ import java.util.Date;
  */
 public class Solicitud {
     private int total,numero;
-    private String producto;
+    private String producto="";
     private Date fecha;
     private Cliente cliente;
 
@@ -93,8 +94,10 @@ public class Solicitud {
     }
     
     public void mostrarDet(){
+        SimpleDateFormat formato = new SimpleDateFormat();
+        
         System.out.println("------DETALLE------");
-        System.out.println("fecha: "+this.fecha);
+        System.out.println("fecha: "+formato.format(fecha));
         System.out.println("numero: "+this.numero);
         System.out.println("cliente:"+this.cliente.getNombre());
         System.out.println(this.producto);
